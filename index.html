@@ -2,10 +2,18 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<title>PDF Host</title>
+<title>PDF Loader</title>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id"); // get ?id=XXXX
+
+  if (id) {
+    // redirect to PDF inside Test folder
+    window.location.href = "./Test/" + id + ".pdf";
+  } else {
+    document.write("Add ?id=AGREEMENTNUMBER in the URL.");
+  }
+</script>
 </head>
-<body>
-  <h2>PDF Host Activated</h2>
-  <p>Use /Test?AGREEMENTNUMBER to open PDFs.</p>
-</body>
+<body></body>
 </html>
