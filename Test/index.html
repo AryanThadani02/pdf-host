@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Loading...</title>
+<script>
+  // Get whatever comes after the "?"
+  const file = window.location.search.substring(1).trim();  
+
+  if (file) {
+    // Redirect to ./<AGREEMENT>.pdf inside the same Test folder
+    window.location.href = "./" + file + ".pdf";
+  } else {
+    document.write("No file given after '?' in URL.");
+  }
+</script>
+</head>
+<body></body>
+</html>
